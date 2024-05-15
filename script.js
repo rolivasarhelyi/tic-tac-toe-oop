@@ -35,8 +35,16 @@ const winning_combinations = [
 for(let i=0; i<squares.length; i++){
     squares[i].addEventListener('click',()=>{
 
+        // displaying the players on click to the square
+        squares[i].textContent    = currentPlayer
 
 
+        // display the winner 
+        if(checkForWinner(currentPlayer)){
+            endMessage.textContent = `player winns ${currentPlayer}`
+            console.log(currentPlayer)
+            return
+        }
 
         // Players turn logic
         currentPlayer = (currentPlayer===players[0])?players[1]:players[0];
@@ -47,4 +55,25 @@ for(let i=0; i<squares.length; i++){
             endMessage.textContent = `O's turn`
         }
     })
+}
+
+
+// function to check the winner
+
+function checkForWinner(currentPlayer){
+
+    for(let i=0; i<winning_combinations.length; i++){
+
+        // extract winning combination single array values using destructring
+        const [a,b,c] = winning_combinations[i];
+
+       console.log(squares[a].textContent===currentPlayer);
+       console.log(squares[b].textContent===currentPlayer);
+       console.log(squares[c].textContent===currentPlayer);
+
+       if(squares[a].textContent===currentPlayer && squares[b].textContent===currentPlayer && squares[c].textContent===currentPlayer){
+        return true
+       }
+    }
+    return false
 }

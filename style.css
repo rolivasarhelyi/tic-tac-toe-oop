@@ -29,6 +29,8 @@ body{
   grid-gap: 5px;
 }
 .play-area__tile {
+  width: 135px;
+  height: 135px;
   border: 1px solid #D3D3D3;
   background-color: #F5F5F5;
   font-size: 40px;
