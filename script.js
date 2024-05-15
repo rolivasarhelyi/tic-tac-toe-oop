@@ -34,6 +34,11 @@ const winning_combinations = [
 
 for(let i=0; i<squares.length; i++){
     squares[i].addEventListener('click',()=>{
+
+
+
+
+        // Players turn logic
         currentPlayer = (currentPlayer===players[0])?players[1]:players[0];
         if(currentPlayer==players[0]){
             endMessage.textContent = `X's turn`
