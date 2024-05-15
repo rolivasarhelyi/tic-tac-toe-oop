@@ -4,9 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Tic-Tac-Toe OOP</title>
+    <title>Tic-Tac-Toe </title>
   </head>
   <body>
+    <header>
+      <h2 class="title">Tic Tac Toe</h2>
+    </header>
     <main class="play-area">
       <div id="1" class="play-area__tile">1</div>
       <div id="2" class="play-area__tile">2</div>
@@ -18,7 +21,9 @@
       <div id="8" class="play-area__tile">8</div>
       <div id="9" class="play-area__tile">9</div>
     </main>
-
+    <div id="endGame">
+      <input type="button" value="Restart" id="restartButton" onclick="restartButton()"/>
+  </div>
     <script src="script.js"></script>
   </body>
 </html>
